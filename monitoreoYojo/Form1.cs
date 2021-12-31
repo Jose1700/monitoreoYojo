@@ -432,5 +432,10 @@ namespace monitoreoYojo
             //Asignamos el valor de 1 a evento del click
             evento = 1;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

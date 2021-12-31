@@ -32,6 +32,8 @@ namespace monitoreoYojo
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnEnviar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.nombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnChat = new System.Windows.Forms.Button();
@@ -54,8 +56,6 @@ namespace monitoreoYojo
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEnviar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -102,6 +102,30 @@ namespace monitoreoYojo
             this.splitContainer1.Size = new System.Drawing.Size(984, 749);
             this.splitContainer1.SplitterDistance = 173;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnEnviar
+            // 
+            this.btnEnviar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEnviar.FlatAppearance.BorderSize = 0;
+            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
+            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.Location = new System.Drawing.Point(0, 448);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEnviar.Size = new System.Drawing.Size(173, 23);
+            this.btnEnviar.TabIndex = 29;
+            this.btnEnviar.Text = "Enviar";
+            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviar.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(3, 477);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(167, 260);
+            this.panel2.TabIndex = 28;
             // 
             // nombre
             // 
@@ -391,30 +415,6 @@ namespace monitoreoYojo
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(3, 477);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(167, 260);
-            this.panel2.TabIndex = 28;
-            // 
-            // btnEnviar
-            // 
-            this.btnEnviar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEnviar.FlatAppearance.BorderSize = 0;
-            this.btnEnviar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SlateGray;
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
-            this.btnEnviar.ForeColor = System.Drawing.Color.White;
-            this.btnEnviar.Location = new System.Drawing.Point(0, 448);
-            this.btnEnviar.Name = "btnEnviar";
-            this.btnEnviar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEnviar.Size = new System.Drawing.Size(173, 23);
-            this.btnEnviar.TabIndex = 29;
-            this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEnviar.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +427,7 @@ namespace monitoreoYojo
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SOFTWARE DE MONITOREO YOJO";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
