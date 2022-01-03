@@ -200,6 +200,7 @@ namespace monitoreoYojo
             this.btnApagar.Text = "Apagar Equipo";
             this.btnApagar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // btnArchivos
             // 
