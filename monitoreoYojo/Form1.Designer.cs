@@ -218,6 +218,7 @@ namespace monitoreoYojo
             this.btnArchivos.Text = "Transferir Archivos";
             this.btnArchivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArchivos.UseVisualStyleBackColor = true;
+            this.btnArchivos.Click += new System.EventHandler(this.btnArchivos_Click);
             // 
             // btnDesbloquear
             // 

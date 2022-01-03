@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace monitoreoYojo
 {
@@ -460,5 +461,19 @@ namespace monitoreoYojo
         {
             Basim("Shutdown");
         }
+
+        private void btnArchivos_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog abrir = new OpenFileDialog();
+            if(abrir.ShowDialog()== DialogResult.OK)
+            {
+                String direccion = abrir.FileName;
+
+                Process proceso = new Process();
+                proceso.StartInfo.FileName = direccion;
+                proceso.Start();
+            }
+        }
+
     }
 }
