@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using System.Diagnostics;
 
 namespace monitoreoYojo
@@ -438,28 +439,10 @@ namespace monitoreoYojo
         {
             //Esto es una prueba
         }
-        void Basim(string b)
-        {
-            try
-            {
-                TcpClient myclient = new TcpClient(nombreEquipo.Text, 5020);
-                NetworkStream myns = myclient.GetStream();
-                StreamWriter mysw = new StreamWriter(myns);
-                System.Threading.Thread.Sleep(50);
-                mysw.WriteLine(b);
-                mysw.Close();
-                myns.Close();
-                myclient.Close();
-
-            }
-            catch (Exception ex)
-            {
-                // MessageBox.Show(ex.Message);
-            }
-        }
+        
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            Basim("Shutdown");
+            Process.Start("cmd /c shutdown -s -t 10");
         }
 
         private void btnArchivos_Click(object sender, EventArgs e)
